@@ -1,5 +1,6 @@
 import { DataSource } from "typeorm";
 import dotenv from "dotenv";
+// import { PeriUser } from "../Entities/PeriUser";
 
 dotenv.config();
 
@@ -12,5 +13,6 @@ export const appDataSource  = new DataSource({
     database: process.env.TYPEORM_DATABASE,
     port: Number(process.env.TYPEORM_PORT),
     synchronize: true,
-    entities: ["./src/Entities/*.ts"],
+    migrations: ['src/database/migrations/*.ts'],
+    entities: ['src/Entities/PeriUser.ts'],
 });
