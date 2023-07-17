@@ -16,3 +16,5 @@ export const appDataSource  = new DataSource({
     migrations: ['src/database/migrations/*.ts'],
     entities: ['src/Entities/PeriUser.ts'],
 });
+
+appDataSource.initialize();

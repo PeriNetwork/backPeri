@@ -1,10 +1,10 @@
 import {Entity, Column, CreateDateColumn, PrimaryColumn, PrimaryGeneratedColumn} from 'typeorm';
-import {v4 as uuid} from 'uuid';
+// import {v4 as uuid} from 'uuid';
 
 @Entity()
 export class PeriUser {
     @PrimaryGeneratedColumn("increment")
-    readonly id: string;    
+    readonly id: number;    
 
     @Column()
     name: string;
@@ -22,11 +22,5 @@ export class PeriUser {
     created_at: Date;
 
     @Column()
-    nFollowers: number;
-
-    constructor() {
-        if(!this.id) {
-            this.id = uuid();
-        }
-    }
+    nFollowers: number = 0;
 }
