@@ -23,4 +23,7 @@ export class PeriUser {
 
     @Column()
     nFollowers: number = 0;
+
+    @Column()
+    active: boolean = true;
 }

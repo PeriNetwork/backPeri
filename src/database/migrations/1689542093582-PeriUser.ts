@@ -14,6 +14,7 @@ export class PeriUser1689542093582 implements MigrationInterface {
                     { name: "birth_date", type: "date" },
                     { name: "created_at", type: "timestamp", default: "CURRENT_TIMESTAMP" },
                     { name: "nFollowers", type: "int", default: 0},
+                    { name: "active", type: "boolean", default: true},
                 ],
             })
         );
