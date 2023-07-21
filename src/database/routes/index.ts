@@ -4,7 +4,7 @@ import { GetAllPeriUserController } from "../../controllers/PeriUserControllers/
 import { CreatePeriUserController } from "../../controllers/PeriUserControllers/CreatePeriUserController";
 import { GetOnePeriUserController } from "../../controllers/PeriUserControllers/GetOnePeriUserController";
 import { DeleteOnePeriUserController } from "../../controllers/PeriUserControllers/DeleteOnePeriUserController";
-import { LogInPeriUserController } from "../../controllers/PeriUserControllers/LogInPeriUserController";
+import { GetPeriUserEmailPasswordController } from "../../controllers/PeriUserControllers/GetPeriUserEmailPasswordController";
 
 const routes = Router();
 
@@ -21,7 +21,9 @@ routes.route("/api/periusers/:id")
     .put(new DeleteOnePeriUserController().handle);
 
 // log in periuser using email and password
+
 routes.route("/api/periusers/login/:email/:password")
-    .get(new LogInPeriUserController().handle);
+    .get(new GetPeriUserEmailPasswordController().handle);
+
 
 export { routes };
